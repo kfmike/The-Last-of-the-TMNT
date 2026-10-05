@@ -47,12 +47,12 @@ JSR $FF9B 		;FF73  20 9B FF
 ;draw signature
 LDA #$22 		;FF76  A9 22 		set up x/y for signature
 STA $2006 		;FF78  8D 06 20
-LDA #$34 		;FF7B  A9 34
+LDA #$2E 		;FF7B  A9 30
 STA $2006 		;FF7D  8D 06 20
-LDX #$06 		;FF80  A2 06
+LDX #$0C 		;FF80  A2 0C
 
-LDA $FFA7,X 	;FF82  BD A7 FF 	signature tile data ENDS at FFA7
-STA $2007 		;FF85  8D 07 20 	loop backwards from FFA7 drawing tiles
+LDA $FFA7,X 	;FF82  BD A7 FF
+STA $2007 		;FF85  8D 07 20
 DEX 			;FF88  CA
 BNE $FF82 		;FF89  D0 F7
 
@@ -74,4 +74,4 @@ INY				;FFA3  C8
 STY $2007 		;FFA4  8C 07 20
 RTS 			;FFA7  60
 
-FFA8		;B0 30 3F 3E 3D 3C signature tile data stored backwards for dex loop above
+FFA7		;04 FF BB B5 B4 B0 40 30 3F 3E 3D 3C signature tile data stored backwards for dex loop above
