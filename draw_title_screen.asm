@@ -62,8 +62,8 @@ TAX 			;FF8C  AA
 STX $0300 		;FF8D  8E 00 03 	;destroyed instruction from jump
 JMP $C306 		;FF90  4C 06 C3
 
-FF93 		;first row first tile ID for each turtle. inc by 1 to draw each
-FF9A 		;second row first tile ID for each turtle. inc by 1 to draw each
+FF93 		;39 CA CD EA first row first tile ID for each turtle. inc by 1 to draw each
+FF9A 		;BC DA DD ED second row first tile ID for each turtle. inc by 1 to draw each
 
 ;draw subroutine for portrait
 TAY 			;FF9B  A8
@@ -74,4 +74,4 @@ INY				;FFA3  C8
 STY $2007 		;FFA4  8C 07 20
 RTS 			;FFA7  60
 
-FFA8		;signature tile data stored backwards for dex loop above
+FFA8		;B0 30 3F 3E 3D 3C signature tile data stored backwards for dex loop above
