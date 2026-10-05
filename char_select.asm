@@ -28,7 +28,7 @@ BNE $FF45	;FF38  D0 0B
 
 ;load current turtle index, increment and wrap if necessary
 LDX $C9		;FF3A  A6 C9
-INX			;FF3C  E8
+INX		;FF3C  E8
 CPX #$04	;FF3D  E0 04
 BCC $FF43	;FF3F  90 02
 LDX #$00	;FF41  A2 00
