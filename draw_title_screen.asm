@@ -25,7 +25,7 @@ LDA $1C 		;FF4D  A5 1C
 CMP #$02 		;FF4F  C9 02
 BNE $FF8B 		;FF51  D0 38
 
-LDA $C9 		;FF53  A5 C9		current turtle index
+LDA $F9 		;FF53  A5 F9		current turtle index
 TAX 			;FF55  AA
 
 ;draw first row of portrait
