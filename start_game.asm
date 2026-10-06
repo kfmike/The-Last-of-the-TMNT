@@ -19,10 +19,10 @@ JMP	$FED7	;CB4B  4C D7 FE
 
 STA $55		;FED7  85 55	set technodrome RNG (destroyed from jump)
 
-LDX $C9		;FED9  A6 C9    get index of selected turtle 
-STX $DA 	;FEDB  86 DA	save it in DA since C9 needs to be cleared for next game
+LDX $F9		;FED9  A6 F9    get index of selected turtle 
+STX $DA 	;FEDB  86 DA	save it in DA since F9 needs to be cleared for next game
 LDA #$00 	;FEDD  A9 00
-STA $C9 	;FEDF  85 C9
+STA $F9 	;FEDF  85 F9
 
 ;load sub weapon quantity
 LDA #$14	;FEE1  A9 14 	

@@ -10,6 +10,8 @@
 ; Entry point: File Address: 0x1C40F, CPU Address: $C3FF
 ; Payload:     File Address: 0x1FF40, CPU Address: $FF30
 
+; update zp clear to include F9, which I am going to use for my counter
+; edit rom file at 0x1C383 change F9 to FA
 
 ; Entry Point
 
@@ -27,11 +29,11 @@ LDX $D9		;FF36  A6 D9
 BNE $FF45	;FF38  D0 0B
 
 ;load current turtle index, increment and wrap if necessary
-LDX $C9		;FF3A  A6 C9
-INX		;FF3C  E8
+LDX $F9		;FF3A  A6 F9
+INX			;FF3C  E8
 CPX #$04	;FF3D  E0 04
 BCC $FF43	;FF3F  90 02
 LDX #$00	;FF41  A2 00
-STX $C9		;FF43  86 C9
+STX $F9		;FF43  86 F9
 JSR $C413	;FF45  20 13 C4 	;destroyed instruction from jump
 JMP $C402	;FF48  4C 02 C4
